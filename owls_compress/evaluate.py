@@ -13,11 +13,15 @@ def length_ratio(compressed: str, uncompressed: str) -> float:
 
 
 def bulk_compress(compressor: Compressor, texts: List[bytes]) -> List[bytes]:
-    return [compressor.compress(t) for t in texts]
-
+    ret = [compressor.compress(t) for t in texts]
+    assert all([isinstance(r, bytes) for r in ret])
+    return ret
 
 def bulk_uncompress(compressor: Compressor, texts: List[bytes]) -> List[bytes]:
-    return [compressor.uncompress(t) for t in texts]
+    ret = [compressor.uncompress(t) for t in texts]
+    assert all([isinstance(r, bytes) for r in ret])
+    return ret
+
 
 
 @dataclass
@@ -52,7 +56,7 @@ def simple_eval(compressor: Compressor, txts: List[bytes]):
         success=success,
 
         scores=scores,
-        mean_score=mean_score
+        mean_score=mean_score,
     )
 
 
