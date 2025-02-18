@@ -31,7 +31,7 @@ from ows_compress.datasets import datasets
 
 datasets['train_shakespeare'] # Use this to inform your compression algo
 datasets['valid_shakespeare'] # Use this to test out your compression algo
-datasets['test_shakespear'] # This is the held out data we will use to judge the algos. Don't cheat and look at this :).
+datasets['test_shakespeare'] # This is the held out data we will use to judge the algos. Don't cheat and look at this :).
 ```
 
 ## Ideas
