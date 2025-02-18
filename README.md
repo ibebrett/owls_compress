@@ -15,7 +15,7 @@ than moving it to common location. This lets us continue developing the module l
 
 To run an eval you can run the following script anywhere:
 
-```owls_compress_evaluate ZeroCompressor shakes_train```
+```owls_compress_evaluate ZeroCompressor train_shakespeare```
 
 replacing with the compressor of your choice and the dataset of your choice.
 
